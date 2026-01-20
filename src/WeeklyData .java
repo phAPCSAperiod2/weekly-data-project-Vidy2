@@ -11,7 +11,7 @@ public class WeeklyData {
     // TODO: Declare a private array to store the week’s data
     //       Choose an appropriate type (double[] or int[])
     //       Create other instance variables as necessary
-    
+    private int[] datad = new int[7];
 
 
     // -------------------------------------------------------------
@@ -26,6 +26,10 @@ public class WeeklyData {
     public WeeklyData(double[] input) {
         // TODO: (Optional) Check if input is null and handle appropriately
         // TODO: Create a new array with the same length as input
+        int[] datad = new int[7];
+        for (int i = 0; i++; i < datad.length){
+            datad[i] = data[i];
+        }
         // TODO: Copy each value from input into the internal data array
         // NOTE: Do NOT do this.data = input; (that would create aliasing)
     }
@@ -40,10 +44,14 @@ public class WeeklyData {
      * @return the sum of all values in the data array
      */
     public double getTotal() {
+        int tot = 0;
         // TODO: Create a variable to store the running total
         // TODO: Use a loop to add each value in the array to the total
+        for (int item:datad){
+            tot += item;
+        }
         // TODO: Return the total
-        return 0.0; // replace with your calculated total
+        return tot; // replace with your calculated total
     }
 
 
@@ -60,7 +68,10 @@ public class WeeklyData {
         // TODO: If the array length is 0, return 0.0
         // TODO: Otherwise, divide the total by the number of elements
         // Hint: You may call getTotal()
-        return 0.0; // replace with your calculated average
+        if (datad.length == 0){
+            return 0.0;
+        } else {
+            return datad.getTotal() / datad.length;
     }
 
 
@@ -73,10 +84,19 @@ public class WeeklyData {
      * @return the maximum value
      */
     public double getMax() {
+        int max = null;
+        for (int i = 0; i++; i < datad.length){
+            if (i == 0){
+                max = datad[i];
+            }
+            if (datad[i] > max){
+                max = datad[i];
+            }
+        }
         // TODO: Assume the first value is the current maximum
         // TODO: Loop through the rest of the array and update max as needed
         // TODO: Return the maximum value found
-        return 0.0; // replace with the maximum value
+        return max; // replace with the maximum value
     }
 
 
@@ -89,10 +109,19 @@ public class WeeklyData {
      * @return the minimum value
      */
     public double getMin() {
+        int min = null;
+        for (int i = 0; i++; i < datad.length){
+            if (i == 0){
+                min = datad[i];
+            }
+            if (datad[i] > min){
+                min = datad[i];
+            }
+        }
+        return min;
         // TODO: Assume the first value is the current minimum
         // TODO: Loop through the rest of the array and update min as needed
         // TODO: Return the minimum value found
-        return 0.0; // replace with the minimum value
     }
 
 
