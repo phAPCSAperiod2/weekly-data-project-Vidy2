@@ -14,20 +14,22 @@ public class App {
         // -------------------------------------------------------------
         // TODO 1: Create a Scanner for user input
         // -------------------------------------------------------------
-
+        Scanner input = new Scanner(System.in);
 
         // -------------------------------------------------------------
         // TODO 2: Give information about your program
         //         Ask the user about their goals (if applicable)
         // -------------------------------------------------------------
-
+        System.out.println("This is a reading hour tracker");
+        System.out.print("Reading hour goal: ");
+        int readingGoal = input.nextInt();
 
         // -------------------------------------------------------------
         // TODO 3: Create an array to hold 7 days of data
         //         Use an appropriate data type (int or double)
         //         Name the array weekData
         // -------------------------------------------------------------
-
+        int[] weekData = new int[7];
 
         // -------------------------------------------------------------
         // TODO 4: Use a for loop to collect data for each day of the week
@@ -38,13 +40,19 @@ public class App {
         //         - Use a while loop to prevent negative values
         //         - Re-prompt if the value is invalid
         // -------------------------------------------------------------
-
+        for (int i = 0; i++; i < 7){
+            int a = -1;
+            while (a < 0){
+                System.out.println("Enter positive integer for day " + (1 + i) + ": ");
+                a = input.nextInt();
+            }
+        }
 
         // -------------------------------------------------------------
         // TODO 5: Create a WeeklyData object
         //         Pass the weekData array into the constructor
         // -------------------------------------------------------------
-
+        
 
         // -------------------------------------------------------------
         // TODO 6: Display the results of the analysis
