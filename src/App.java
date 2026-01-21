@@ -22,14 +22,14 @@ public class App {
         // -------------------------------------------------------------
         System.out.println("This is a reading hour tracker");
         System.out.print("Reading hour goal: ");
-        int readingGoal = input.nextInt();
+        double readingGoal = input.nextDouble();
 
         // -------------------------------------------------------------
         // TODO 3: Create an array to hold 7 days of data
         //         Use an appropriate data type (int or double)
         //         Name the array weekData
         // -------------------------------------------------------------
-        int[] weekData = new int[7];
+        int[] weekData = new double[7];
 
         // -------------------------------------------------------------
         // TODO 4: Use a for loop to collect data for each day of the week
@@ -44,7 +44,7 @@ public class App {
             int a = -1;
             while (a < 0){
                 System.out.println("Enter positive integer for day " + (1 + i) + ": ");
-                a = input.nextInt();
+                a = input.nextDouble();
                 weekData[i] = a;
             }
         }
