@@ -65,10 +65,10 @@ public class App {
         //
         //         Use clear labels and formatted output if needed
         // -------------------------------------------------------------
-        System.out.println(dat.getTotal());
-        System.out.println(dat.getAverage());
-        System.out.println(dat.getMin());
-        System.out.println(dat.getMax());
+        System.out.println("Total: " + dat.getTotal());
+        System.out.println("Average: " + dat.getAverage());
+        System.out.println("Minimum: " + dat.getMin());
+        System.out.println("Maximum: " + dat.getMax());
 
         // -------------------------------------------------------------
         // TODO 7: Display the full week of data
