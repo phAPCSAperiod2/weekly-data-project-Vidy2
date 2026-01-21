@@ -40,11 +40,12 @@ public class App {
         //         - Use a while loop to prevent negative values
         //         - Re-prompt if the value is invalid
         // -------------------------------------------------------------
-        for (int i = 0; i++; i < 7){
+        for (int i = 0; i < 7; i++){
             int a = -1;
             while (a < 0){
                 System.out.println("Enter positive integer for day " + (1 + i) + ": ");
                 a = input.nextInt();
+                weekData[i] = a;
             }
         }
 
@@ -52,7 +53,7 @@ public class App {
         // TODO 5: Create a WeeklyData object
         //         Pass the weekData array into the constructor
         // -------------------------------------------------------------
-        
+        WeeklyData dat = new WeeklyData(weekData);
 
         // -------------------------------------------------------------
         // TODO 6: Display the results of the analysis
@@ -64,13 +65,16 @@ public class App {
         //
         //         Use clear labels and formatted output if needed
         // -------------------------------------------------------------
-
+        System.out.println(dat.getTotal());
+        System.out.println(dat.getAverage());
+        System.out.println(dat.getMin());
+        System.out.println(dat.getMax());
 
         // -------------------------------------------------------------
         // TODO 7: Display the full week of data
         //         Use the toString() method from WeeklyData
         // -------------------------------------------------------------
-
+        System.out.println(dat.toString());
 
         // -------------------------------------------------------------
         // TODO 8: Give the user insights about their week
@@ -78,7 +82,11 @@ public class App {
         //         --> "You were very hydrated this week!"
         //         --> etc.
         // -------------------------------------------------------------
-
+        if (dat.getAverage() < readingGoal){
+            System.out.println("You're not reading enough!");
+        } else {
+            System.out.println("Good job you're reading enough");
+        }
 
     }
 }
